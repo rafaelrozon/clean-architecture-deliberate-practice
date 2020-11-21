@@ -1,0 +1,9 @@
+{
+  "name": "clean-architecture-deliberate-practice",
+  "version": "1.0.0",
+  "main": "n/a",
+  "repository": "https://github.com/rafaelrozon/clean-architecture-deliberate-practice.git",
+  "author": "Rozon, Rafael <rafaelrozon.developer@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
