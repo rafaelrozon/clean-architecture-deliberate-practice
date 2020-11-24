@@ -27,12 +27,14 @@ The goals should be real, concrete things, instead of subjective values like "I 
 ## Project Goals
 
 - **Outcome**: Have a good understanding of the Clean Architecture and hands-on experience applying its concepts.
-- **Curriculum**: TBD
-- **Timeframe**: TBD
+- **Curriculum**: see the [Planning Doc](PLANNING.MD)
+- **Timeframe**: 2 months starting on the week of November 24th, 2020
 
 ## Project Milestones
 
 - Read The Clean Architecture book
+<!-- - TODO: complete this -->
+- TBD
 
 ### References
 [Repository - robert8138/python-deliberate-practice](https://github.com/robert8138/python-deliberate-practice)
