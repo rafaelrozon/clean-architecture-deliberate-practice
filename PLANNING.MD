@@ -5,14 +5,14 @@
 - **Week 0**
   - Survey materials
 - **Week 1**
-  - The Clean Architecture chapters 1, 2, 3
-  - [The Clean Architecture Blog Post by Uncle Bob](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-  - [Dependency Injection - Wikipedia](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
-  - [45 - Clean Architecture](https://www.youtube.com/watch?v=ONj4zvLtmpA)
+  - [ ] The Clean Architecture chapters 1, 2, 3
+  - [ ] [The Clean Architecture Blog Post by Uncle Bob](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+  - [X] [Dependency Injection - Wikipedia](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
+  - [X] [45 - Clean Architecture](https://www.youtube.com/watch?v=ONj4zvLtmpA)
 - **Week 2**
-  - The Clean Architecture chapters 4, 5, 6
-  - [Clean architecture for the rest of us](https://pusher.com/tutorials/clean-architecture-introduction)
-  - [The Principles of Clean Architecture by Uncle Bob Martin](https://www.youtube.com/watch?v=o_TH-Y78tt4)
+  - [ ] The Clean Architecture chapters 4, 5, 6
+  - [ ] [Clean architecture for the rest of us](https://pusher.com/tutorials/clean-architecture-introduction)
+  - [X] [The Principles of Clean Architecture by Uncle Bob Martin](https://www.youtube.com/watch?v=o_TH-Y78tt4)
 - **Week 3**
   - The Clean Architecture chapters 6, 7, 9
   - [Making Architecture Matter - Martin Fowler Keynote](https://www.youtube.com/watch?v=DngAZyWMGR0)
