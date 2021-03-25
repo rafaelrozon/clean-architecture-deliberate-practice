@@ -43,3 +43,32 @@ A high-level policy has an instance of some code that implements the Policy Serv
 
 1. https://en.wikipedia.org/wiki/Dependency_inversion_principle#/media/File:Dependency_inversion.png
 2. https://en.wikipedia.org/wiki/Dependency_inversion_principle#/media/File:DIPLayersPattern_v2.png
+
+---
+
+https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+
+They all have the same objective, which is the separation of concerns. They all achieve this separation by dividing the software into layers. Each has at least one layer for business rules, and another for interfaces
+Independent of Frameworks
+Testable.
+Independent of UI
+Independent of Database
+Independent of any external agency
+The concentric circles represent different areas of software. In general, the further in you go, the higher level the software becomes. The outer circles are mechanisms. The inner circles are policies.
+source code dependencies can only point inwards
+Nothing in an inner circle can know anything at all about something in an outer circle.
+data formats used in an outer circle should not be used by an inner circle
+Entities encapsulate Enterprise wide business rules. An entity can be an object with methods, or it can be a set of data structures and functions. It doesn’t matter so long as the entities could be used by many different applications in the enterprise.
+If you don’t have an enterprise, and are just writing a single application, then these entities are the business objects of the application.
+application specific business rules
+These use cases orchestrate the flow of data to and from the entities, and direct those entities to use their enterprise wide business rules to achieve the goals of the use case.
+We do, however, expect that changes to the operation of the application will affect the use-cases and therefore the software in this layer. If the details of a use-case change, then some code in this layer will certainly be affected.
+The software in this layer is a set of adapters that convert data from the format most convenient for the use cases and entities, to the format most convenient for some external agency such as the Database or the Web.
+The outermost layer is generally composed of frameworks and tools
+This layer is where all the details go. The Web is a detail. The database is a detail. We keep these things on the outside where they can do little harm
+Note also the source code dependencies. Each one of them points inwards towards the use cases.
+We usually resolve this apparent contradiction by using the Dependency Inversion Principle. In a language like Java, for example, we would arrange interfaces and inheritance relationships such that the source code dependencies oppose the flow of control at just the right points across the boundary
+The same technique is used to cross all the boundaries in the architectures. We take advantage of dynamic polymorphism to create source code dependencies that oppose the flow of control so that we can conform to The Dependency Rule no matter what direction the flow of control is going in.
+Typically the data that crosses the boundaries is simple data structures
+The important thing is that isolated, simple, data structures are passed across the boundaries. We don’t want to cheat and pass Entities or Database rows. We don’t want the data structures to have any kind of dependency that violates The Dependency Rule.
+So when we pass data across a boundary, it is always in the form that is most convenient for the inner circle.
