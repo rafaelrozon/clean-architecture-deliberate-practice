@@ -1,0 +1,2 @@
+1. If entities are enterprise wide rules how applications consume them? through packages? (https://softwareengineering.stackexchange.com/questions/429253/if-entities-in-the-clean-architecture-are-enterprise-wide-rules-how-different)
+2. what is separation of concerns?

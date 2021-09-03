@@ -1,8 +1,76 @@
-# Kitchen Sink Doc
+# Notes
 
 To be refactored...
 
 ----
+
+## [The Clean Architecture, The Clean Code Blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+
+
+
+- Previous pattters (Hexagon, Onion, etc), use separation of concerns through layers. At least one layer for business rules and another for interfaces
+
+- Characteristics:
+
+  - independent of frameworks
+  - testable
+  - independent of UI
+  - independent of database
+  - independent of any external agency
+
+- Dependency Rule
+
+  - inner circles: policies, high level software
+  - outer circles: mechanisms, lower level software
+  - the rule: source code dependencies can only point inwards
+    - inner circles don't know and don't use anything from outter circles
+    - data formats of outer circles should not be used in inner circles
+
+- Entities
+
+  - Enterprise wide business rules
+  - An object with methods, a set of data structures and functions
+  - used by many different applications in the enterprise
+  - If you don't have an enterprise
+    - entities are the business objects of the application, the high-level rules
+    - Note: I wonder if this is how Clean Architecture should be. applied to frontend
+  - "No operational change to any particular application should affect the entity layer"
+
+- Use Cases
+
+  - application specific business rules
+  - orchestrate the flow of data to and from entities and instruct the entities to use their rules in order to achieve objective of the use case
+  - changes in this layer must not affect the entities
+  - changes in outer layers should not affect this layer
+  - changes in the operation of the application will affect this layer
+
+- Interface Adapters
+
+  - Adapters that convert data from the format convenient for the use cases and entities to the format convenient to the outside
+
+- Frameworks and drivers
+
+  - frameworks and tools
+  - write only code to glue 
+  - where all the details go (web, database, etc)
+
+- Crossing boundaries
+
+  - Source code dependencies always point inwards
+  - Use Dependency Inversion Principle to make the source code dependencies oppose the flow of control. 
+  - The flow of control goes from outter circle to inner circles and then back to outter circles, but the dependency is always inward. Use the Dependency Inversion Principle
+
+- What data crosses the boundaries
+
+  - simple data structures, DTO, arguments in function calls, hashmaps, an object
+  - it must be isolated, simple, data structures
+  - always pass data in the format most convenient to the inner circle
+
+  
+
+
+
+
 
 ## [Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
 
